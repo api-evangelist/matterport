@@ -1,8 +1,29 @@
 aid: matterport
 name: MatterPort
-description: MatterPort is a company surfaced as a portfolio company of a16z, y-combinator and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Matterport is a spatial data company (now a CoStar Group company) whose platform
+  captures physical spaces and turns them into immersive, dimensionally-accurate 3D
+  models known as digital twins. Used across residential and commercial real estate,
+  architecture/engineering/construction, facilities management, insurance, retail and
+  travel, the platform pairs a capture pipeline (Pro cameras, 360 cameras, LiDAR and
+  smartphone apps) with a hosted Showcase 3D player and a developer surface. Developers
+  build on Matterport through a GraphQL API family (Model API, Account API, Import API),
+  the Property Intelligence API, the Custom Roles API, and a family of JavaScript SDKs
+  (SDK for Embeds, SDK Bundle, and a WebComponent) that let applications embed and
+  script the 3D Showcase player, read space geometry and metadata, and manage models.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://matterport.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,12 +34,98 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- 3D
+- Digital Twin
+- Spatial Data
+- Real Estate
+- Construction
+- GraphQL
+- SDK
+- Computer Vision
+- Property Intelligence
+apis:
+- name: Matterport Model API (GraphQL)
+  description: >-
+    Matterport's public GraphQL API family. The Model API reads and manages 3D models
+    (spaces, meshes, assets, labels/tags, sweeps); the Account API manages account,
+    folders and users; the Import API ingests externally-captured data. Authenticated
+    with an API Token (Token ID + Token Secret) over HTTP Basic auth.
+  humanURL: https://matterport.com/developers
+  baseURL: https://api.matterport.com/api/models/graph
+  properties:
+  - type: Documentation
+    url: https://matterport.github.io/showcase-sdk/
+  - type: APIReference
+    url: https://api.matterport.com/docs/reference
+  - type: GettingStarted
+    url: https://matterport.github.io/showcase-sdk/sdk_home.html
+common:
+- type: TrustCenter
+  url: security/matterport-trust-center.yml
+- type: DomainSecurity
+  url: security/matterport-domain-security.yml
+- type: DeveloperPortal
+  url: https://matterport.com/developers
+- type: Documentation
+  url: https://matterport.github.io/showcase-sdk/
+- type: APIReference
+  url: https://api.matterport.com/docs/reference
+- type: GettingStarted
+  url: https://matterport.github.io/showcase-sdk/sdk_home.html
+- type: Support
+  url: https://support.matterport.com
+- type: Blog
+  url: https://matterport.com/blog
+- type: GitHubOrganization
+  url: https://github.com/matterport
+- type: Pricing
+  url: https://matterport.com/plans
+- type: SignUp
+  url: https://buy.matterport.com/free-account-register
+- type: Login
+  url: https://authn.matterport.com/auth/login
+- type: TermsOfService
+  url: https://matterport.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.costar.com/about/privacy-notice
+- type: StatusPage
+  url: https://status.matterport.com
+- type: Compliance
+  url: https://matterport.com/trust
+- type: ChangeLog
+  url: https://matterport.github.io/showcase-sdk/sdk_changelog.html
+- type: Packages
+  url: packages/matterport-packages.yml
+- type: SDKs
+  url: packages/matterport-packages.yml
+- type: Authentication
+  url: authentication/matterport-authentication.yml
+- type: Conventions
+  url: conventions/matterport-conventions.yml
+- type: Components
+  url: components/matterport-components.yml
+- type: Lifecycle
+  url: lifecycle/matterport-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/matterport-lifecycle.yml
+- type: Conformance
+  url: conformance/matterport-conformance.yml
+- type: ErrorCatalog
+  url: errors/matterport-error-codes.yml
+- type: DataModel
+  url: data-model/matterport-data-model.yml
+- type: LLMsTxt
+  url: llms/matterport-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
