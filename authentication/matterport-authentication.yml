@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.github.io/showcase-sdk/
+docs: https://matterport.github.io/showcase-sdk/models_getstarted.html
+notes: >-
+  Matterport uses distinct auth models for its two developer surfaces. The GraphQL API
+  family (Model/Account/Import) authenticates with an API Token — a Token ID plus a
+  Token Secret created in account settings — sent over HTTP Basic auth. The Showcase
+  SDK (embeds) authenticates with an application/SDK key passed on the bootstrap
+  script URL; newer SDK versions can also connect to a space via OAuth. No OpenAPI is
+  published, so this profile is search-derived from the developer docs rather than a
+  spec.
+summary:
+  types: [http-basic, apiKey, oauth2]
+  api_key_in: [query, header]
+  oauth2_flows: [authorizationCode]
+schemes:
+- name: API Token (GraphQL)
+  type: http
+  scheme: basic
+  used_by: [Model API, Account API, Import API, Property Intelligence API, Custom Roles API]
+  description: >-
+    Token ID + Token Secret combined as "TokenID:TokenSecret", base64-encoded, sent as
+    the HTTP Basic Authorization header against https://api.matterport.com/api/models/graph.
+  credential_source: Account settings > Developer Tools > API Tokens
+- name: SDK Application Key
+  type: apiKey
+  in: query
+  parameter: applicationKey
+  used_by: [SDK for Embeds, SDK Bundle, WebComponent]
+  description: >-
+    SDK key appended to the bootstrap script URL
+    (static.matterport.com/showcase-sdk/bootstrap/<ver>/sdk.es6.js?applicationKey=...)
+    to authorize the embedded Showcase player.
+- name: OAuth (SDK connect)
+  type: oauth2
+  flows: [authorizationCode]
+  used_by: [SDK for Embeds]
+  description: >-
+    Newer ES6 SDK bootstrap supports connecting to a space via OAuth (not supported by
+    the legacy window.MP_SDK build).

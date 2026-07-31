@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.github.io/showcase-sdk/sdk_changelog.html
+scheme: semver
+cadence: roughly monthly
+current_version: 26.4.4
+notes: >-
+  Matterport maintains separate dated change logs for the Showcase SDK, plus the Model
+  API, Account API and Import API, and a dedicated Deprecation log. The recent window
+  of the SDK change log is captured below (SDK history runs from v1.0 in Feb 2017).
+related_changelogs:
+- name: SDK Change Log
+  url: https://matterport.github.io/showcase-sdk/sdk_changelog.html
+- name: Deprecation Log
+  url: https://matterport.github.io/showcase-sdk/
+entries:
+- version: 26.4.4
+  date: '2026-04-24'
+  type: addition
+  highlights:
+  - Measurements are now Layer-aware, with add/remove functions scoped to specific layers.
+- version: 26.4.2
+  date: '2026-04-08'
+  type: addition
+  highlights:
+  - Added temporary and type accessors to measurement data.
+  - Improved raycasting performance for SDK Scene objects via BVH computation.
+- version: 26.3.4
+  date: '2026-03-26'
+  type: addition
+  highlights:
+  - Added measurement creation via Measurements.add.
+  - Enabled direct updates to measurement labels and points.
+- version: 26.3.3
+  date: '2026-03-19'
+  type: addition
+  breaking: false
+  highlights:
+  - Added Measurements.remove (experimental) and a unique id on measurement data.
+  - Deprecated Measurements.getData in favor of Measurements.data.
+- version: 26.3.2
+  date: '2026-03-12'
+  type: addition
+  highlights:
+  - Added synchronous access to THREE.js through Scene.THREE.
+- version: 26.3.1
+  date: '2026-03-05'
+  type: improvement
+  highlights:
+  - SDK connector now retries failed connections under unstable network conditions.

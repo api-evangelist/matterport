@@ -1,0 +1,52 @@
+generated: '2026-07-20'
+method: derived
+source: https://matterport.github.io/showcase-sdk/
+notes: >-
+  Entity graph derived from Matterport's documented GraphQL Model/Account API surface
+  and Showcase SDK vocabulary (no OpenAPI is published, so relationships are grounded
+  in the documented domain objects rather than $ref links). id-prefixes/domains are
+  not published publicly and are left null.
+entities:
+- name: Account
+  description: A Matterport account / organization that owns models and users.
+  relationships:
+  - has_many: Model
+    via: models
+  - has_many: Folder
+    via: folders
+  - has_many: User
+    via: users
+- name: Folder
+  description: Organizational container for models within an account.
+  relationships:
+  - belongs_to: Account
+  - has_many: Model
+    via: models
+- name: Model
+  description: A captured 3D space (digital twin); the core resource of the Model API.
+  relationships:
+  - belongs_to: Account
+  - has_many: Sweep
+    via: sweeps
+  - has_many: Mesh
+    via: meshes
+  - has_many: Asset
+    via: assets
+  - has_many: Label
+    via: labels
+- name: Sweep
+  description: An individual scan position / panorama capture within a model.
+  relationships:
+  - belongs_to: Model
+- name: Mesh
+  description: 3D mesh geometry generated for a model.
+  relationships:
+  - belongs_to: Model
+- name: Asset
+  description: Downloadable/generated asset (photos, floor plans, tiles) for a model.
+  relationships:
+  - belongs_to: Model
+- name: Label
+  description: Tag / annotation placed within a model (also exposed as Tags in the SDK).
+  relationships:
+  - belongs_to: Model

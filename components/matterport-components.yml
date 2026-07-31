@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.github.io/showcase-sdk/sdk_home.html
+notes: >-
+  Matterport ships a family of client-side / embeddable components for placing and
+  scripting its 3D Showcase player in a web application. These are distinct from
+  server-side SDKs (Matterport ships none) — they run in the browser against an
+  embedded space.
+loaders:
+- name: SDK for Embeds bootstrap (ES6)
+  url: https://static.matterport.com/showcase-sdk/bootstrap/3.0.0-0-g0517b8d76c/sdk.es6.js
+  parameter: applicationKey
+- name: SDK for Embeds bootstrap (legacy)
+  url: https://static.matterport.com/showcase-sdk/bootstrap/3.0.0-0-g0517b8d76c/sdk.js
+  global: window.MP_SDK
+components:
+- family: Showcase Embed
+  name: SDK for Embeds
+  kind: iframe + scripting API
+  description: >-
+    Embed a Matterport space via an <iframe> and execute actions against / listen to
+    events from the 3D Showcase player from the host web app.
+  npm: "@matterport/sdk"
+- family: Showcase Engine
+  name: SDK Bundle
+  kind: engine access
+  description: >-
+    Extension of the SDK for Embeds giving direct access to the 3D engine, renderer,
+    scene graph, cameras, lighting, model loaders, input and XR components.
+- family: Web Component
+  name: WebComponent (Beta)
+  kind: custom element
+  description: >-
+    Isolated distribution of the SDK Bundle that encapsulates the Showcase player in a
+    single DOM element; built on lit, ships UMD + ESM.
+  npm: "@matterport/webcomponent"
+- family: React
+  name: r3f adapter
+  kind: react-three/fiber integration
+  description: >-
+    Matterport SDK utilities/adapter for react-three/fiber, for declarative scene
+    building with React + three.js.
+  npm: "@matterport/r3f"

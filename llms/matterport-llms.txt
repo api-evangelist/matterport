@@ -1,0 +1,39 @@
+# Matterport
+
+> Matterport (a CoStar Group company) is a spatial data platform that captures physical spaces and turns them into dimensionally-accurate 3D digital twins. Developers build on a GraphQL API family (Model, Account, Import), the Property Intelligence API, the Custom Roles API, and a set of JavaScript SDKs that embed and script the 3D Showcase player.
+
+## APIs
+- [Developer Portal](https://matterport.com/developers): Matterport APIs and SDKs overview.
+- [GraphQL API Reference](https://api.matterport.com/docs/reference): Model, Account, and Import API reference and interactive console.
+- [GraphQL endpoint](https://api.matterport.com/api/models/graph): HTTP Basic auth with an API Token (Token ID + Token Secret).
+
+## Docs
+- [SDK & API Documentation](https://matterport.github.io/showcase-sdk/): SDK for Embeds, SDK Bundle, WebComponent, tutorials and examples.
+- [Getting Started (SDK for Embeds)](https://matterport.github.io/showcase-sdk/sdk_home.html)
+- [Change Log](https://matterport.github.io/showcase-sdk/sdk_changelog.html)
+- [Support / Help Center](https://support.matterport.com)
+
+## SDKs
+- [@matterport/sdk](https://www.npmjs.com/package/@matterport/sdk): Embed SDK (npm).
+- [@matterport/webcomponent](https://www.npmjs.com/package/@matterport/webcomponent): Showcase player web component.
+- [@matterport/r3f](https://www.npmjs.com/package/@matterport/r3f): react-three/fiber adapter.
+
+## Artifacts
+- [Packages / SDKs](packages/matterport-packages.yml)
+- [Authentication](authentication/matterport-authentication.yml)
+- [Conventions](conventions/matterport-conventions.yml)
+- [Components](components/matterport-components.yml)
+- [Changelog](changelog/matterport-changelog.yml)
+- [Lifecycle](lifecycle/matterport-lifecycle.yml)
+- [Conformance](conformance/matterport-conformance.yml)
+- [Error catalog](errors/matterport-error-codes.yml)
+- [Data model](data-model/matterport-data-model.yml)
+
+## Company
+- [Trust Center](https://matterport.com/trust): SOC 2, GDPR, CCPA.
+- [Status](https://status.matterport.com)
+- [Pricing / Plans](https://matterport.com/plans)
+- [Blog](https://matterport.com/blog)
+- [GitHub](https://github.com/matterport)
+- [Terms of Service](https://matterport.com/terms-of-use)
+- [Privacy Policy](https://www.costar.com/about/privacy-notice)

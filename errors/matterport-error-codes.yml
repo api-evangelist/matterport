@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.github.io/showcase-sdk/
+notes: >-
+  Matterport's GraphQL API returns application-level errors in the standard GraphQL
+  top-level "errors[]" array; HTTP-level failures (auth) surface as HTTP status codes
+  before the GraphQL layer. Matterport does not publish a numbered error-code registry,
+  so this catalog captures the error envelope and the transport-level statuses observed
+  against the live endpoint rather than an invented code list.
+format: graphql-errors
+envelope:
+  field: errors
+  shape: >-
+    { "errors": [ { "message": string, "path": [..], "extensions": { ... } } ], "data": null }
+http_statuses:
+- status: 401
+  meaning: Unauthorized — missing or invalid API Token (Basic auth) on the GraphQL endpoint.
+  observed: true
+  remediation: Supply a valid Token ID:Token Secret as HTTP Basic on https://api.matterport.com/api/models/graph
+- status: 200
+  meaning: >-
+    GraphQL responses (including validation/business errors) are returned with HTTP 200
+    and a populated errors[] array.
+  observed: false

@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.github.io/showcase-sdk/
+docs: https://matterport.github.io/showcase-sdk/models_getstarted.html
+notes: >-
+  Cross-cutting request/response semantics for the Matterport developer surface,
+  captured from the developer docs. The primary API is GraphQL, so several REST-style
+  conventions (URI versioning, offset pagination, RFC 9457 problem+json) do not apply;
+  their GraphQL equivalents are recorded instead.
+authentication:
+  style: http-basic-token
+  detail: GraphQL API Token (Token ID + Token Secret) over HTTP Basic; see authentication/matterport-authentication.yml
+transport:
+  primary: GraphQL over HTTPS POST
+  endpoint: https://api.matterport.com/api/models/graph
+  content_type: application/json
+idempotency:
+  supported: false
+  detail: >-
+    Matterport does not document an idempotency-key header for GraphQL mutations; reads
+    are naturally idempotent as GraphQL queries.
+pagination:
+  style: graphql-cursor
+  detail: >-
+    Collection fields in the Model/Account APIs are paginated with GraphQL connection
+    arguments (page/pageSize or cursor-style arguments) rather than REST offset/limit.
+error_envelope:
+  style: graphql-errors
+  detail: >-
+    Errors are returned in the GraphQL top-level "errors[]" array (message, path,
+    extensions); HTTP-level auth failures return 401 before the GraphQL layer. See
+    errors/matterport-error-codes.yml.
+versioning:
+  scheme: sdk-semver
+  detail: >-
+    The Showcase SDK is versioned with semantic versioning on a roughly monthly cadence
+    (e.g. 26.4.4). GraphQL APIs (Model/Account/Import) maintain their own change logs.
+    See lifecycle/matterport-lifecycle.yml.
+rate_limiting:
+  documented: false
+  detail: Rate-limit signaling is not publicly documented.
+cross_links:
+  authentication: authentication/matterport-authentication.yml
+  errors: errors/matterport-error-codes.yml
+  lifecycle: lifecycle/matterport-lifecycle.yml
+  data_model: data-model/matterport-data-model.yml

@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/org/matterport
+notes: >-
+  Matterport publishes its client-side developer libraries in the @matterport npm
+  scope; all packages below are maintained by Matterport employees (@matterport.com)
+  and carry Matterport, Inc. copyright. Matterport ships no first-party server-side
+  SDK (PyPI/Maven/NuGet/etc.); the GraphQL API is consumed over plain HTTP with any
+  GraphQL client. Registries probed with no first-party result: PyPI, Maven Central,
+  NuGet, pkg.go.dev, RubyGems, Packagist, crates.io.
+packages:
+- language: javascript
+  registry: npm
+  name: "@matterport/sdk"
+  version: 1.6.0
+  url: https://www.npmjs.com/package/@matterport/sdk
+  install: npm install @matterport/sdk
+  description: Matterport SDK NPM Package — the Embed SDK for scripting the 3D Showcase player.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@matterport/webcomponent"
+  version: 0.1.47
+  url: https://www.npmjs.com/package/@matterport/webcomponent
+  install: npm install @matterport/webcomponent
+  description: Web component that encapsulates the Showcase Player in a single DOM element (built on lit).
+  official: true
+- language: javascript
+  registry: npm
+  name: "@matterport/r3f"
+  version: 0.2.7
+  url: https://www.npmjs.com/package/@matterport/r3f
+  install: npm install @matterport/r3f
+  description: Matterport SDK adapter/utilities for react-three/fiber.
+  official: true

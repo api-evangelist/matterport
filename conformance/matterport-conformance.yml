@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.com/trust
+notes: >-
+  Cross-cutting standards / compliance posture. Compliance certifications are searched
+  from the Matterport Trust Center; API-shape standards are derived from the documented
+  developer surface (GraphQL, HTTP Basic token auth). No OpenAPI is published, so
+  spec-level standards (RFC 9457 problem+json, OData, JSON:API, FAPI) are marked
+  not-conformant / not-applicable rather than asserted.
+standards:
+- id: graphql
+  conforms: true
+  evidence: Model/Account/Import APIs are GraphQL over https://api.matterport.com/api/models/graph
+- id: oauth2
+  conforms: true
+  evidence: Showcase SDK connect supports OAuth authorizationCode (ES6 bootstrap)
+- id: http-basic-auth
+  conforms: true
+  evidence: GraphQL API authenticates via HTTP Basic with API Token ID/Secret
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: GraphQL errors[] envelope used instead of application/problem+json
+- id: soc2
+  conforms: true
+  evidence: SOC 2 named on matterport.com/trust
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliance stated on matterport.com/trust
+- id: ccpa
+  conforms: true
+  evidence: CCPA compliance stated on matterport.com/trust

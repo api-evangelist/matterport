@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://matterport.github.io/showcase-sdk/sdk_changelog.html
+notes: >-
+  Lifecycle posture for the Matterport developer surface, searched from the developer
+  docs and status page. The Showcase SDK carries a dedicated Deprecation log and
+  deprecates methods with a documented replacement (e.g. Measurements.getData ->
+  Measurements.data in 26.3.3). No formal RFC 8594 Sunset/Deprecation HTTP-header
+  policy or published SLA uptime target was found.
+versioning:
+  scheme: semver
+  current: 26.4.4
+  cadence: roughly monthly
+  docs: https://matterport.github.io/showcase-sdk/sdk_changelog.html
+deprecation:
+  policy_url: https://matterport.github.io/showcase-sdk/sdk_changelog.html
+  sunset_header: false
+  detail: >-
+    Deprecations are announced in the SDK/API change logs with a named replacement;
+    experimental features are labeled as such before promotion.
+  examples:
+  - Measurements.getData deprecated in favor of Measurements.data (SDK 26.3.3)
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.matterport.com
+deprecated_operations: []

@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+host: https://api.matterport.com
+notes: >-
+  No genuine /.well-known/ discovery documents were found. api.matterport.com returns
+  HTTP 200 for every /.well-known/* path, but the body is the single-page-app HTML
+  shell of the API reference (Content-Type text/html), not a real security.txt / OIDC /
+  oauth-authorization-server / api-catalog / ai-plugin document — so these are recorded
+  as SPA catch-all false-positives and NOT saved as artifacts or wired as a WellKnown
+  pointer. matterport.com/.well-known/security.txt returns 404.
+documents:
+- path: /.well-known/security.txt
+  host: https://api.matterport.com
+  status: 200
+  genuine: false
+  reason: SPA catch-all HTML, not RFC 9116 text
+- path: /.well-known/security.txt
+  host: https://matterport.com
+  status: 404
+  genuine: false
+- path: /.well-known/openid-configuration
+  host: https://api.matterport.com
+  status: 200
+  genuine: false
+  reason: SPA catch-all HTML, not OIDC JSON
+- path: /.well-known/oauth-authorization-server
+  host: https://api.matterport.com
+  status: 200
+  genuine: false
+  reason: SPA catch-all HTML, not RFC 8414 JSON
+- path: /.well-known/api-catalog
+  host: https://api.matterport.com
+  status: 200
+  genuine: false
+  reason: SPA catch-all HTML
+- path: /.well-known/ai-plugin.json
+  host: https://api.matterport.com
+  status: 200
+  genuine: false
+  reason: SPA catch-all HTML
