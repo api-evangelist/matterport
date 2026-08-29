@@ -11,6 +11,17 @@ description: >-
   the Property Intelligence API, the Custom Roles API, and a family of JavaScript SDKs
   (SDK for Embeds, SDK Bundle, and a WebComponent) that let applications embed and
   script the 3D Showcase player, read space geometry and metadata, and manage models.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
