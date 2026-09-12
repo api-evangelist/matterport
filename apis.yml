@@ -85,6 +85,8 @@ apis:
   - type: GettingStarted
     url: https://matterport.github.io/showcase-sdk/sdk_home.html
 common:
+- type: Website
+  url: https://www.matterport.com/
 - type: TrustCenter
   url: security/matterport-trust-center.yml
 - type: DomainSecurity
