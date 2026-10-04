@@ -51,11 +51,11 @@ tags:
 - 3D
 - Digital Twin
 - Spatial Data
-- Real-Estate
+- Real Estate
 - Construction
 - GraphQL
 - SDK
-- Computer-Vision
+- Computer Vision
 - Property Intelligence
 tags_raw:
 - Company
@@ -68,6 +68,8 @@ tags_raw:
 - SDK
 - Computer Vision
 - Property Intelligence
+- Real-Estate
+- Computer-Vision
 apis:
 - name: Matterport Model API (GraphQL)
   description: >-
