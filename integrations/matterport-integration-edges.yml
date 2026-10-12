@@ -1,0 +1,25 @@
+generated: '2026-10-13'
+method: searched
+source:
+- https://composio.dev/toolkits/matterport
+checked:
+- https://composio.dev/toolkits/matterport
+- https://monid.ai/tools/matterport
+- https://n8n.io/integrations/matterport/
+- https://zapier.com/apps/matterport/integrations
+summary: null
+marketplace_apps:
+- marketplace: composio
+  channel: agent-gateway
+  app: matterport
+  url: https://composio.dev/toolkits/matterport
+  identity: action-prefix
+  actions:
+  - key: MATTERPORT_DELETE_MODEL
+  - key: MATTERPORT_MODEL
+  - key: MATTERPORT_MODELS
+  - key: MATTERPORT_MODEL_EVENT_WEBHOOK_CALLBACKS
+  - key: MATTERPORT_ROOM_CLASSIFICATIONS
+  - key: MATTERPORT_UPDATE_MODEL_STATE
+edges: []
+templates: []
