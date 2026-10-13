@@ -3,6 +3,7 @@ method: searched
 source:
 - https://composio.dev/toolkits/matterport
 checked:
+- https://aws.amazon.com/marketplace/
 - https://composio.dev/toolkits/matterport
 - https://monid.ai/tools/matterport
 - https://n8n.io/integrations/matterport/
@@ -21,5 +22,21 @@ marketplace_apps:
   - key: MATTERPORT_MODEL_EVENT_WEBHOOK_CALLBACKS
   - key: MATTERPORT_ROOM_CLASSIFICATIONS
   - key: MATTERPORT_UPDATE_MODEL_STATE
-edges: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=a65e9b97-873a-4562-af42-c8f50b131e09
+  listing_count: 2
+  apps:
+  - Matterport
+  - Immersive 3D Digital Twin for Spatial Data Capture and Collaboration
+  seller_name: Matterport
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
 templates: []
