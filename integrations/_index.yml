@@ -15,3 +15,16 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: matterport-procore-own
+  label: Procore (own)
+  partner: procore
+  partner_name: Procore (own)
+  category: IT; Progress Documentation
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.procore.com/apps/matterport
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
