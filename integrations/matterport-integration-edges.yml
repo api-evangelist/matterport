@@ -5,6 +5,7 @@ source:
 checked:
 - https://aws.amazon.com/marketplace/
 - https://composio.dev/toolkits/matterport
+- https://marketplace.autodesk.com/sitemap.xml
 - https://monid.ai/tools/matterport
 - https://n8n.io/integrations/matterport/
 - https://zapier.com/apps/matterport/integrations
@@ -57,4 +58,23 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: IT; Progress Documentation
+- partner_name: Autodesk (own)
+  partner: autodesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.autodesk.com/apps/c4b6fc32-3777-4ba1-965a-44d7a5963bf8
+  mirror_of: autodesk/integrations/autodesk-integration-edges.yml
+  apps:
+  - Matterport for Autodesk® Revit®
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: RVT
+  publisher_verified:
+  - autodesk-digital-signature
 templates: []

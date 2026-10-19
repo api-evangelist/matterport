@@ -28,3 +28,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: matterport-autodesk-own
+  label: Autodesk (own)
+  partner: autodesk
+  partner_name: Autodesk (own)
+  category: RVT
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.autodesk.com/apps/c4b6fc32-3777-4ba1-965a-44d7a5963bf8
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
