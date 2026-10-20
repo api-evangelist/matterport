@@ -4,7 +4,9 @@ source:
 - https://composio.dev/toolkits/matterport
 checked:
 - https://aws.amazon.com/marketplace/
+- https://cloudsecurityalliance.org/star/registry
 - https://composio.dev/toolkits/matterport
+- https://eucoc.cloud/en/public-register/list-of-adherent-services
 - https://marketplace.autodesk.com/sitemap.xml
 - https://monid.ai/tools/matterport
 - https://n8n.io/integrations/matterport/
@@ -41,23 +43,6 @@ edges:
   seller_name: Matterport
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
-- partner_name: Procore (own)
-  partner: procore
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.procore.com/apps/matterport
-  mirror_of: procore/integrations/procore-integration-edges.yml
-  apps:
-  - Matterport
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: IT; Progress Documentation
 - partner_name: Autodesk (own)
   partner: autodesk
   partner_match: mirror
@@ -77,4 +62,51 @@ edges:
   category: RVT
   publisher_verified:
   - autodesk-digital-signature
+- partner_name: Cloud Security Alliance STAR Registry
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cloudsecurityalliance.org/star/registry/matterport/services/matterport
+  category: Cloud security assurance
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-1
+    registered_name: Matterport
+    registry_id: matterport
+    service_url: https://matterport.com/
+    matched_domain: matterport.com
+    matched_by: domain
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    certified_products: []
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
+- partner_name: Procore (own)
+  partner: procore
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.procore.com/apps/matterport
+  mirror_of: procore/integrations/procore-integration-edges.yml
+  apps:
+  - Matterport
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: IT; Progress Documentation
 templates: []
