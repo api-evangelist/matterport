@@ -3,6 +3,7 @@ method: searched
 source:
 - https://composio.dev/toolkits/matterport
 checked:
+- autodesk/integrations/autodesk-integration-edges.yml
 - https://aws.amazon.com/marketplace/
 - https://cloudsecurityalliance.org/star/registry
 - https://composio.dev/toolkits/matterport
@@ -11,7 +12,11 @@ checked:
 - https://monid.ai/tools/matterport
 - https://n8n.io/integrations/matterport/
 - https://zapier.com/apps/matterport/integrations
-- procore/integrations/procore-integration-edges.yml
+- https://500.co/api/startups
+- https://500.co/companies
+- https://www.antler.co/portfolio
+- https://www.techstars.com/portfolio
+- https://www.ycombinator.com/companies
 summary: null
 marketplace_apps:
 - marketplace: composio
@@ -92,21 +97,32 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
-- partner_name: Procore (own)
-  partner: procore
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.procore.com/apps/matterport
-  mirror_of: procore/integrations/procore-integration-edges.yml
-  apps:
-  - Matterport
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: IT; Progress Documentation
+- partner_name: Y Combinator
+  partner: y-combinator
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.ycombinator.com/companies/matterport
+  category: accelerator portfolio participation
+  contract_reference:
+    register: Y Combinator company directory (ycombinator.com/companies/<slug>)
+    standard: null
+    spec_file: null
+    role: accelerator-portfolio-company
+    registered_name: Matterport
+    register_id: https://www.ycombinator.com/companies/matterport
+    register_country: US
+    register_website: http://matterport.com
+    matched_domain: matterport.com
+    matched_by: domain
+    signal_note: 'participation only: the accelerator''s own portfolio register lists the company (cohort / investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-accelerator-portfolios.py
+    detected: '2026-10-21'
+    batch: Winter 2012
+    status: Public
+  detected_by: sweep-accelerator-portfolios.py
+  first_seen: '2026-10-21'
 templates: []

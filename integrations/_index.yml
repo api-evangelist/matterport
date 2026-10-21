@@ -15,19 +15,6 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
-- slug: matterport-procore-own
-  label: Procore (own)
-  partner: procore
-  partner_name: Procore (own)
-  category: IT; Progress Documentation
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.procore.com/apps/matterport
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: matterport-autodesk-own
   label: Autodesk (own)
   partner: autodesk
@@ -39,5 +26,64 @@
   evidence: https://marketplace.autodesk.com/apps/c4b6fc32-3777-4ba1-965a-44d7a5963bf8
   source: edge
   relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: matterport-cloud-security-alliance-star-registry
+  label: Cloud Security Alliance STAR Registry
+  partner_name: Cloud Security Alliance STAR Registry
+  category: Cloud security assurance
+  type: register
+  channel: standard-directory
+  evidence: https://cloudsecurityalliance.org/star/registry/matterport/services/matterport
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-1
+    registered_name: Matterport
+    registry_id: matterport
+    service_url: https://matterport.com/
+    matched_domain: matterport.com
+    matched_by: domain
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    certified_products: []
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
+- slug: matterport-y-combinator
+  label: Y Combinator
+  partner: y-combinator
+  partner_name: Y Combinator
+  category: accelerator portfolio participation
+  type: register
+  channel: standard-directory
+  evidence: https://www.ycombinator.com/companies/matterport
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Y Combinator company directory (ycombinator.com/companies/<slug>)
+    standard: null
+    spec_file: null
+    role: accelerator-portfolio-company
+    registered_name: Matterport
+    register_id: https://www.ycombinator.com/companies/matterport
+    register_country: US
+    register_website: http://matterport.com
+    matched_domain: matterport.com
+    matched_by: domain
+    signal_note: 'participation only: the accelerator''s own portfolio register lists the company (cohort / investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-accelerator-portfolios.py
+    detected: '2026-10-21'
+    batch: Winter 2012
+    status: Public
   status: not-a-workflow
   arazzo: null
